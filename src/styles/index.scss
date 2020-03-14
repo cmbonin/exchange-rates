@@ -1,0 +1,55 @@
+$body-color: #fff;
+$body-bg: #666;
+$margin: 10px;
+$font-size: 16px;
+$breakpoint: 400px;
+
+body {
+  color: $body-color;
+  font-family: sans-serif;
+  background-color: $body-bg;
+  font-size: $font-size;
+}
+
+a {
+  color: $body-color;
+}
+
+.row {
+  display: flex;
+  margin: 0 10px;
+}
+
+.centre-column {
+  margin: 0 auto;
+  width: 90%;
+}
+
+@media only screen and (min-width: $breakpoint) {
+  .centre-column {
+    max-width: $breakpoint;
+    width: 60%;
+  }
+}
+
+.calculator {
+  margin-bottom: $margin;
+}
+
+.currency-row {
+  width: 100%;
+  margin-bottom: $margin;
+  display: flex;
+}
+
+.currency-selector {
+  margin-right: $margin;
+}
+
+.currency-amount {
+  min-width: 100px;
+}
+
+.footnote {
+  font-size: 80%;
+}
