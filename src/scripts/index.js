@@ -47,15 +47,16 @@ const DEFAULT_TO = 'EUR';
   // Debouncer for rates change
   const updateRatesDebounced = debounce(() => 
     updateRates(baseCurrency.value, toCurrency.value)
-  , 800);
-
-  // Initialise the curency selection fields
-  loadCurrencyOptions(baseCurrency, DEFAULT_BASE);
-  loadCurrencyOptions(toCurrency, DEFAULT_TO);
+  , 500);
 
   // Initialise update rate events to the currency select fields & 
   baseCurrency.addEventListener('change', () => updateRatesDebounced());
   toCurrency.addEventListener('change', () => updateRatesDebounced());
   baseAmount.addEventListener('change', () => updateRatesDebounced());
+
+  // Set initial values
+  loadCurrencyOptions(baseCurrency, DEFAULT_BASE);
+  loadCurrencyOptions(toCurrency, DEFAULT_TO);
+  updateRatesDebounced();
 
 })();
