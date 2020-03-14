@@ -1,25 +1,17 @@
-# Exchange caclulator
+# [Exchange caclulator][0]
+=====================
 
 A lightweight exchange caclulator
 
 
 Uses the https://www.exchangerate-api.com/ API
 
-
-### Installation
+### Usage
 
 ```
 npm install
-```
-
-### Start Dev Server
-
-```
 npm start
-```
-
-### Build Prod Version
-
-```
 npm run build
 ```
+
+[0]: http://celinebonin.com/exchange-rates/
